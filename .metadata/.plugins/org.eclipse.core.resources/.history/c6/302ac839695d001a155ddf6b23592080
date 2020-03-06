@@ -1,0 +1,14 @@
+package main;
+
+public class Nave {
+	
+private int posX;
+private int posY;
+
+
+
+public Nave (int posX, int posY) {
+	this.posX=posX;
+	this.posY=posY;
+}
+}

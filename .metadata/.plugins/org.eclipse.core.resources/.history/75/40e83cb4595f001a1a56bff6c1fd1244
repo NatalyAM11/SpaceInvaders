@@ -1,0 +1,16 @@
+package main;
+import processing.core.PApplet;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+public class NaveController {
+	
+	public void keyPressed(KeyEvent evt){
+		
+		/*if ( key==ArrowLeft) {
+			
+		}*/
+		
+	}
+
+}

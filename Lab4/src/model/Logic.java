@@ -1,0 +1,22 @@
+package model;
+import java.util.ArrayList;
+import processing.core.PApplet;
+
+public class Logic {
+	
+        PApplet app;
+        int screen;
+	
+	
+	
+public void ejecutar(PApplet app) {
+	
+	switch(screen) {
+	
+	case 0: app.rect(50,50,26,26);
+	break;
+	}
+	
+	
+}
+}

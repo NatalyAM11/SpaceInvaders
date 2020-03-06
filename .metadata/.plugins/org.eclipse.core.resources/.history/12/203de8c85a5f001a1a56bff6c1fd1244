@@ -1,0 +1,30 @@
+package main;
+import processing.core.PApplet;
+
+import java.util.ArrayList;
+
+public class NaveController {
+	
+	PApplet app;
+
+	public void keyPressed(PApplet app) {
+	
+		if (app.keyCode == app.LEFT) {
+			moverIzquierda();
+		}
+		if (app.keyCode == app.RIGHT) {
+			moverDerecha();
+		}
+		if (app.keyCode== app.ENTER) {
+			disparar();
+		}
+
+	}
+	
+	
+	
+	
+	
+}
+
+
