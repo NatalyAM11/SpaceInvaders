@@ -38,10 +38,7 @@ public class EnemyView {
 			this.y += 60;
 			this.vel *= -1;
 			
-		}/*else if(this.y < 0) {
-			this.y += 80;
-			this.vel *= -1;
-			}*/
+		}
 		
 		if(this.x<=0) {
 			this.y += 60;

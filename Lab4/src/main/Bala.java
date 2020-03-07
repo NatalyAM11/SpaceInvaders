@@ -24,6 +24,14 @@ public class Bala {
 	}
 	
 	
+	//metodo para disparar las bolitas
+		public void disparar () {
+			app.fill(203,52,248);
+			app.ellipse(this.x, this.y,15,15);
+			this.y -= this.vel;
+		}
+	
+	
 	public PApplet getApp() {
 		return app;
 	}
@@ -64,12 +72,7 @@ public class Bala {
 	}
 
 
-	//metodo para disparar las bolitas
-	public void disparar () {
-		app.fill(203,52,248);
-		app.ellipse(this.x, this.y,15,15);
-		this.y -= this.vel;
-	}
+	
 }
 	
 	
