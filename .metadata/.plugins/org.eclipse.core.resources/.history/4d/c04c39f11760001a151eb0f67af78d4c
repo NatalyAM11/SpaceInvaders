@@ -1,0 +1,88 @@
+package main;
+import processing.core.PApplet;
+import java.util.ArrayList;
+
+import main.Bala;
+import controller.NaveController;
+import model.naveLogic;
+
+
+
+public class NaveView {
+		
+	public int posX;
+	public int posY;
+	private PApplet app;
+    private NaveController nc;
+    
+    ArrayList<Bala> balas;
+	
+
+    
+    
+    
+	public NaveView (PApplet app,int posX, int posY) {
+		this.posX= posX;
+		this.posY= posY;
+		this.app=app;
+		nc= new NaveController();
+		balas = new ArrayList<>();
+		
+	}
+	
+
+	
+	//Con lo que pinto el cosito
+	public void pintar() {
+		
+		app.fill(52,248,212);
+		app.rect(this.posX,this.posY,40,40);
+		
+		for (int i = 0; i < balas.size(); i++) {
+			balas.get(i).pintar();
+		}
+		
+		}
+
+	
+	public void mover() {
+		
+		
+		if (app.keyCode == app.RIGHT) {
+			posX+=5;
+			}
+		if (app.keyCode == app.LEFT) {
+			posX-=5;
+			}
+	}
+	
+	public void disparar() {
+		Bala b = new Bala(this.posX + 35, this.posY,app);
+		balas.add(b);
+	}
+			 
+}
+
+		
+		
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+	
+	
+	
+	

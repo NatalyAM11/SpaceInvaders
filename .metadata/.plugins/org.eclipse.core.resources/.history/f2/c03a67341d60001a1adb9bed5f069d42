@@ -1,0 +1,143 @@
+package main;
+
+import controller.NaveController;
+import model.naveLogic;
+import processing.core.PApplet;
+import processing.core.PImage;
+import java.util.ArrayList;
+
+
+public class Main extends PApplet {
+	
+	public NaveView nave;
+	public naveLogic log;
+	public NaveController NC;
+	public EnemyView enemi;
+	int pantalla;
+	PImage pantalla1;
+	PImage bJugar;
+	int posX;
+	int posY;
+	
+	ArrayList<EnemyView> enemigos;
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	PApplet.main("main.Main");
+	}
+	
+	
+	public void settings () {
+		size(800,500);
+		
+	}
+	
+	
+	
+	
+	
+	public void setup () {
+		nave= new NaveView(this,400,430);
+		log= new naveLogic();
+		
+		//Arreglo de enemigos
+		enemigos = new ArrayList<>();
+		
+		pantalla=0;
+		pantalla1=loadImage("img/pantallaSpace.png");
+		bJugar=loadImage("img/bJugar.png");
+		
+		
+		//for para los enemigos
+		for(int i = 0; i< 30; i++) {
+			enemigos.add(new EnemyView(this,70*i,50));}
+		
+	}
+	
+	
+	
+	
+	public void draw() {
+		
+		//Switch que controla el contenido de cada pantalla
+		switch(pantalla) {
+		case 0: image(pantalla1,0,0);
+		image(bJugar,300,290);
+		
+		break;
+		case 1: 
+		background(0);
+		nave.pintar();
+		
+		
+		
+		//Aqui controlo todo lo de los enemigos, que aparezcan y su movimiento
+		for (int i = 0; i < enemigos.size(); i++) {
+			enemigos.get(i).pintar();
+			enemigos.get(i).mover();
+			
+
+			
+			if(enemigos.get(i).getY() > 43000) {
+				pantalla = 2;
+			}
+
+			}
+		
+		/*for (int i = 0; i < nave.getBalas().size(); i++) {
+			for (int j = 0; j < enemigos.size(); j++) {
+				if(PApplet.dist(nave.getBalas().get(i).getPosX(), nave.getBalas().get(i).getPosY(), enemigos.get(j).getX()+25,
+					enemigos.get(j).getY())<25) {
+					
+					enemigos.remove(j);
+					//h.getBalas().get(i).splice(1,i);	
+					nave.getBalas().get(i).setX(5000);
+				}
+			}
+		}*/
+		
+		
+		
+		
+		break;
+		}
+		
+		fill(255);
+	    textSize(50);
+	    text("x=" + mouseX + "y=" + mouseY, mouseX, mouseY);
+	}
+
+	
+	public void mousePressed () {
+		
+		
+		//switch para controlar el cambio de pantalla
+		switch(pantalla) {
+		case 0: if ((mouseX>300 && mouseX<497)&&(mouseY> 290 && mouseY <345)) {
+			pantalla=1;
+		}
+		break;
+		case 1: 
+		}
+		
+		
+	}
+	
+	
+	
+	
+	public void keyPressed() {
+	   
+	nave.mover();
+	
+	}
+}
+
+
+	
+
+
+
+

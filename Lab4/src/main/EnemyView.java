@@ -2,11 +2,15 @@ package main;
 import processing.core.PApplet;
 import java.util.ArrayList;
 
+
 public class EnemyView {
 	
+	PApplet app;
 	public int x;
 	public int y;
-	PApplet app;
+	int vel;
+
+	
 	
 	
 	
@@ -15,18 +19,39 @@ public class EnemyView {
 		this.x=x;
 		this.y=y;
 		this.app=app;
+		this.vel = 4;
+		
 		
 	}
 	
 	public void pintar() {
 		
-		app.fill(87,35,100);
+		app.fill(227,248,52);
 		app.ellipse(this.x, this.y, 40, 40);
 	}
 
-	public void mover() {}
-	
-	
+	public void mover() {
+		this.x += this.vel;
+		
+		if(this.x >= 780) {
+			
+			this.y += 60;
+			this.vel *= -1;
+			
+		}/*else if(this.y < 0) {
+			this.y += 80;
+			this.vel *= -1;
+			}*/
+		
+		if(this.x<=0) {
+			this.y += 60;
+			this.vel *= -1;
+			
+		}
+		
+		
+			
+		}
 	
 
 	public int getX() {

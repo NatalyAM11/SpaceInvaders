@@ -1,0 +1,31 @@
+package main;
+
+
+import processing.core.PApplet;
+
+public class Bala {
+	PApplet app;
+	int x;
+	int y;
+	int vel;
+	PApplet app;
+	
+	public Bala(int x, int y, PApplet app) {
+		this.x = x;
+		this.y = y;
+		this.vel = 5;
+		this.app = app;
+	}
+	
+	public void pintar() {
+		disparar();
+	}
+	
+	public void disparar () {
+		app.fill(35,100,330);
+		app.ellipse(this.x, this.y, 15,15);
+		this.y -= this.vel;
+	}
+}
+	
+	
