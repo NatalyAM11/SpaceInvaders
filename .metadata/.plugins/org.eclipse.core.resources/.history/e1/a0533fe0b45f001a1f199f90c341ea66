@@ -1,0 +1,49 @@
+package controller;
+import processing.core.PApplet;
+
+import java.util.ArrayList;
+
+import main.NaveView;
+import model.naveLogic;
+
+public class NaveController  {
+	
+	
+	PApplet app;
+    int dir;
+    boolean right, left ;
+    
+    
+    
+	public static void moverDerecha() {
+		NaveView.posX+=5;
+	}
+	public static void moverIzquierda () {
+		NaveView.posX-=5;
+	}
+	
+	
+public void keyPressed(PApplet app) {
+		
+		if (app.keyCode == app.LEFT) {
+      	//naveLogic.moverDerecha();
+		}
+		if (app.keyCode == app.RIGHT) {
+			naveLogic.moverDerecha();
+		}
+		if (app.keyCode== app.ENTER) {
+			//disparar();
+		
+		} 
+
+		
+	
+    
+	
+		
+
+	
+	
+	
+
+}

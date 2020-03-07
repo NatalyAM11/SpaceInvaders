@@ -1,0 +1,90 @@
+package main;
+import processing.core.PApplet;
+import java.util.ArrayList;
+
+import controller.NaveController;
+import model.naveLogic;
+
+
+
+public class NaveView {
+		
+	public static int posX;
+	public int posY;
+	private PApplet app;
+	
+	
+	//Inicializo
+	public NaveView (PApplet app) {
+		
+		this.app=app;
+		
+	}
+	
+
+	
+	//Con lo que pinto el cosito
+	public void pintar(PApplet app,int posX, int posY) {
+		
+		this.posX=app.width/2;
+		this.posY=440;
+		app.fill(255,60,30);
+		app.rect(this.posX,this.posY,40,40);
+		}
+
+	
+	public void mover() {
+		
+		
+		if (app.keyCode == app.RIGHT) {
+			moverDerecha();
+			}
+		if (app.keyCode == app.LEFT) {
+			moverIzquierda();
+			}
+	}
+			 public void moverDerecha() {
+					posX+=5;
+				}
+				public void moverIzquierda () {
+					posX-=5;
+				}
+				
+		
+		
+	
+
+
+
+
+	public int getPosX() {
+		return posX;
+	}
+
+
+
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+	
+	
+	
+	
+	}

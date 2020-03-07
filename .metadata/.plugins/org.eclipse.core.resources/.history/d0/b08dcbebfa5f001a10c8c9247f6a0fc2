@@ -1,0 +1,11 @@
+package main;
+import processing.core.PApplet;
+import java.util.ArrayList;
+
+public class EnemyView {
+	
+	public int x;
+	public int y;
+	
+
+}

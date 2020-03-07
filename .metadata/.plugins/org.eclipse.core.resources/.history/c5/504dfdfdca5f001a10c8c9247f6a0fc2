@@ -1,0 +1,36 @@
+package controller;
+import processing.core.PApplet;
+
+import java.util.ArrayList;
+
+import main.NaveView;
+import model.naveLogic;
+
+public class NaveController  {
+	
+	
+	PApplet app;
+    int dir;
+    
+    
+   
+
+    
+		
+
+}
+	
+	
+ 
+
+		
+	
+    
+	
+		
+
+	
+	
+	
+
+}

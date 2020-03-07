@@ -1,0 +1,30 @@
+package controller;
+import processing.core.PApplet;
+
+import java.util.ArrayList;
+
+import main.NaveView;
+import model.naveLogic;
+
+public class NaveController  {
+	
+	
+	PApplet app;
+    int dir;
+    
+    
+   /* public void moverDerecha(PApplet app) {
+		NaveView.posX+=5;
+	}
+	public void moverIzquierda (PApplet app) {
+		NaveView.posX-=5;
+	}*/
+	
+
+    
+		
+	
+	
+	
+
+}

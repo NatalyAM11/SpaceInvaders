@@ -4,32 +4,19 @@ import processing.core.PApplet;
 import java.util.ArrayList;
 
 import main.NaveView;
+import model.naveLogic;
 
-public class NaveController {
+public class NaveController  {
+	
 	
 	PApplet app;
     int dir;
-    boolean right, left ;
+    
+   
+	public void mover() {
+		// TODO Auto-generated method stub
+		
+	}
     
     
-	public void keyPressed(PApplet app) {
-		
-		if (app.keyCode == app.LEFT) {
-      	mover(-1);
-		}
-		if (app.keyCode == app.RIGHT) {
-		mover(1);
-		}
-		if (app.keyCode== app.ENTER) {
-			//disparar();
-		}
-		
-
-	}
-	
-	public void mover(int dir) {
-		NaveView.posX+=dir*5;
-	}
-	
-
 }

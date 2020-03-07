@@ -1,0 +1,27 @@
+package model;
+
+
+import controller.NaveController;
+import main.NaveView;
+import processing.core.PApplet;
+
+public class naveLogic {
+
+public void keyPressed(PApplet app) {
+		
+		if (app.keyCode == app.LEFT) {
+      	NaveView.moverIzquierda(this);
+		}
+		if (app.keyCode == app.RIGHT) {
+			NaveView.moverDerecha(this);
+		}
+		if (app.keyCode== app.ENTER) {
+			//disparar();
+		
+		}
+
+	
+	
+	
+}
+}

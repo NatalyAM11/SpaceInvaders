@@ -1,0 +1,21 @@
+package model;
+
+
+import main.NaveView;
+
+public class naveLogic {
+
+	public static void moverDerecha() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void moverIzquierda() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+}

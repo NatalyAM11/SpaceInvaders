@@ -1,0 +1,15 @@
+package model;
+
+import main.NaveView;
+
+public class naveLogic {
+
+	public static void moverDerecha() {
+		NaveView.posX+=5;
+	}
+	public static void moverIzquierda () {
+		NaveView.posX-=5;
+	}
+	
+	
+}
